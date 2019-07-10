@@ -1,5 +1,6 @@
 package br.com.rbarreto.todo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,6 +18,8 @@ public class Task {
 
     private String name;
     private Boolean status;
+
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date date;
 
     Task(){}

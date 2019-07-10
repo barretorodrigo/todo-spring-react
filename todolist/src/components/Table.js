@@ -59,6 +59,7 @@ export default class Table extends Component{
 
     render(){
         return(
+            <div className="table-responsive-xl">
             <table className="table table-hover">
                 <thead >
                     <tr className="table-secondary">
@@ -71,7 +72,7 @@ export default class Table extends Component{
                 <tbody>
                 {this.state.tasks.map((task) => (
                     <tr key={task.id}>
-                    <th scope="row" >{task.id}</th>
+                    <td>{task.id}</td>
                     <td>{task.name}</td>
                     <td>{task.date}</td>
                     <td>{task.status ? 
@@ -86,6 +87,7 @@ export default class Table extends Component{
                     
                 </tbody>
             </table>
+            </div>
         )
     }
 }
